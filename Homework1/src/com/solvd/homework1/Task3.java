@@ -3,23 +3,40 @@ package com.solvd.homework1;
 import java.util.Arrays;
 
 public class Task3 {
-	
-	public static void main (String[] args) {
 
-		int[] ns= {3, 7, 6, 13, 33, 9, -100, 25};
-		
-		for (int i=0; i < ns.length-1 ; i++) {
-			int min = i;
-			for (int j = i+1; j < ns.length; j++) {
-				
-				if (ns[j]<ns[min]) {
-					min=j;
-				}	
+	public static void main (String[] args) {
+		int[] array= {3, 7, 6, 13, 33, 9, -100, 25};
+		System.out.println(Arrays.toString(selectionSort(array, 0)));
+	}
+
+	static int[] selectionSort(int[] array, int i){
+		int min = i;
+		for (int search = i + 1; search< array.length; search++) {
+			if (array[search] < array[min]){
+				min = search;
 			}
-			int temp = ns[min];
-			ns[min]= ns[i];
-			ns[i]=temp;
 		}
-      System.out.println(Arrays.toString(ns));
+		int temp = array[min];
+		array[min] = array[i];
+		array[i] = temp;
+		i++;
+		if (i + 1 < array.length) {
+			selectionSort(array, i);
+		}
+		return array;
 	}
 }
+
+
+
+//		for (int i=0; i < array.length-1 ; i++) {
+//			int min = i;
+//			for (int j = i+1; j < array.length; j++) {
+//
+//				if (array[j]<array[min]) {
+//					min=j;
+//				}
+//			}
+//			int temp = array[min];
+//			array[min]= array[i];
+//			array[i]=temp;
