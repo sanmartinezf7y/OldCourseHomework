@@ -2,6 +2,8 @@ package com.solvd.homework2.runner;
 
 import com.solvd.homework2.sub1.Desktop;
 
+import java.net.StandardSocketOptions;
+
 public class Runner {
     public static void main(String[] args) {
         Desktop myPC = new Desktop("i3 9100f", 16, 1024, 3, "Black", false, "GTX 1660s");
@@ -18,7 +20,5 @@ public class Runner {
         } else{
             System.out.println("These computers do not share the same components");
         }
-
-
     }
 }
