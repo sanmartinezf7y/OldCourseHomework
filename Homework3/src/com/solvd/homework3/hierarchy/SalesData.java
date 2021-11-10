@@ -13,5 +13,3 @@ public final class SalesData {
         System.out.println("Laptop 2 price: " + myLT2price);
     }
 }
-
-//
