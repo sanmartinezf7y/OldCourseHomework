@@ -4,7 +4,7 @@ import com.solvd.homework3.hierarchy.Computer;
 
 import java.util.Objects;
 
-public class Desktop extends Computer implements boot, shutdown, run {
+public class Desktop extends Computer implements boot, shutdown, run, capsLock, capsUnlock, temperature {
 
     private int fans;
     private String caseColor;

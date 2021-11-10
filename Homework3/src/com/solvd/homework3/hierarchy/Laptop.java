@@ -4,7 +4,7 @@ import com.solvd.homework3.hierarchy.Computer;
 
 import java.util.Objects;
 
-public class Laptop extends Computer implements boot, shutdown, run {
+public class Laptop extends Computer implements boot, shutdown, run, capsUnlock, capsLock, temperature, charge {
 
     private String keyboardLayout;
     private boolean webcam;
