@@ -1,10 +1,10 @@
 package com.solvd.homework3.hierarchy;
 
-import com.solvd.homework3.hierarchy.Computer;
+import com.solvd.homework3.interfaces.*;
 
 import java.util.Objects;
 
-public class Laptop extends Computer implements boot, shutdown, run, capsUnlock, capsLock, temperature, charge {
+public class Laptop extends Computer implements Boot, CapsLock, CapsUnlock, Charge, Run, Shutdown, Temperature {
 
     private String keyboardLayout;
     private boolean webcam;

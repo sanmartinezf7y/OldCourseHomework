@@ -2,35 +2,6 @@ package com.solvd.homework3.hierarchy;
 
 import java.util.Objects;
 
-interface shutdown{
-    public  void shutdown();
-}
-
-interface boot{
-    public void boot();
-}
-
-interface run{
-    public void run();
-}
-
-interface capsLock{
-    public void capsLock();
-}
-
-interface capsUnlock{
-    public void capsUnlock();
-}
-
-interface charge{
-    public void charge();
-}
-
-interface temperature{
-    public void temperature();
-}
-
-
 public abstract class Computer {
 
     private String processor;

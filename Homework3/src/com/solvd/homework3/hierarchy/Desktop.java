@@ -1,10 +1,10 @@
 package com.solvd.homework3.hierarchy;
 
-import com.solvd.homework3.hierarchy.Computer;
+import com.solvd.homework3.interfaces.*;
 
 import java.util.Objects;
 
-public class Desktop extends Computer implements boot, shutdown, run, capsLock, capsUnlock, temperature {
+public class Desktop extends Computer implements Shutdown, Run, CapsLock, CapsUnlock, Temperature {
 
     private int fans;
     private String caseColor;
