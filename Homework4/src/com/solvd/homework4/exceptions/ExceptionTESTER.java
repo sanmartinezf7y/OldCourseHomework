@@ -4,7 +4,7 @@ import java.lang.invoke.MethodHandles;
 import java.util.Scanner;
 import java.util.logging.Logger;
 
-public class ExceptionRunner {
+public class ExceptionTESTER {
     private final static Logger LOGGER = Logger.getLogger(MethodHandles.lookup().lookupClass().getName());
 
     public static void main(String[] args) throws Exception {
@@ -15,11 +15,6 @@ public class ExceptionRunner {
             throw new ArithmeticException("Access denied - You must be at least 18 years old.");
         }
         LOGGER.info("Access granted - you are old enough");
-
-
-
-
-
 
 
     }

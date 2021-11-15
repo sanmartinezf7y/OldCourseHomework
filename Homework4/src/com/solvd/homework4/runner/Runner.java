@@ -1,5 +1,6 @@
 package com.solvd.homework4.runner;
 
+import com.solvd.homework4.exceptions.UnderageException;
 import com.solvd.homework4.hierarchy.Desktop;
 import com.solvd.homework4.hierarchy.Laptop;
 import com.solvd.homework4.hierarchy.SalesData;
@@ -15,7 +16,7 @@ public class Runner {
   private final static Logger LOGGER = Logger.getLogger(MethodHandles.lookup().lookupClass().getName());
 
 
-  public static void main(String[] args) {
+  public static void main(String[] args) throws UnderageException {
 
     Desktop myPC = new Desktop("i3 9100f", 16, 1024, 3, "Black", false, "GTX 1660s");
     Desktop myPC2 = new Desktop("i5 9400f", 8, 512, 2, "White", false, "GT 1030");
@@ -64,6 +65,16 @@ public class Runner {
     myLT2.shutdown();
 
     SalesData.stock();
+
+
+    Scanner scanner1 = new Scanner(System.in);
+    System.out.println("Input your age: ");
+    int age = scanner1.nextInt();
+    if(age<18){
+      throw new UnderageException();
+    }
+    LOGGER.info("Access granted - you are old enough");
+
 
   }
 }
