@@ -19,7 +19,7 @@ public final class SalesData {
         LOGGER.info("Laptop 2 price: " + MY_LT2_PRICE);
     }
     public static void stock(){
-        LOGGER.info("Current laptop stock: " + Laptop.ltcount);
-        LOGGER.info("Current desktop stock: " + Desktop.dtcount);
+        LOGGER.warning("Current laptop stock: " + Laptop.ltcount);
+        LOGGER.warning("Current desktop stock: " + Desktop.dtcount);
     }
 }

@@ -61,7 +61,7 @@ public class Laptop extends Computer implements ICharge {
 
 
    public void overheat(){
-        LOGGER.info("System overheating; shutting down");
+        LOGGER.severe("System overheating; shutting down");
    }
 
 
@@ -90,7 +90,7 @@ public class Laptop extends Computer implements ICharge {
     }
 
     public void temperature(){
-        LOGGER.info("The CPU temperature is 75°C");
+        LOGGER.severe("The CPU temperature is 75°C");
     }
 
 
