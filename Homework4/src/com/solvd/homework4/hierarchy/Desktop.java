@@ -1,8 +1,11 @@
 package com.solvd.homework4.hierarchy;
 
+import java.lang.invoke.MethodHandles;
 import java.util.Objects;
+import java.util.logging.Logger;
 
 public class Desktop extends Computer {
+    private final static Logger LOGGER = Logger.getLogger(MethodHandles.lookup().lookupClass().getName());
 
     private int fans;
     private String caseColor;
@@ -79,27 +82,27 @@ public class Desktop extends Computer {
 
 
     public void run(String program) {
-            System.out.println("Executing " + program);
+            LOGGER.info("Executing " + program);
     }
 
     public void boot() {
-        System.out.println("Welcome to desktop pc");
+        LOGGER.info("Welcome to desktop pc");
     }
 
     public void shutdown() {
-        System.out.println("Shutting down desktop pc");
+        LOGGER.info("Shutting down desktop pc");
     }
 
     public void capsLock(){
-        System.out.println("UPPERCASE INPUT ENABLED");
+        LOGGER.info("UPPERCASE INPUT ENABLED");
     }
 
     public void capsUnlock(){
-        System.out.println("uppercase input disabled");
+        LOGGER.info("uppercase input disabled");
     }
 
     public void temperature(){
-        System.out.println("The CPU temperature is 35°C");
+        LOGGER.info("The CPU temperature is 35°C");
     }
 
 

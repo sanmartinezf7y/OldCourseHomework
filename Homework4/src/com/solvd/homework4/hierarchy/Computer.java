@@ -2,9 +2,12 @@ package com.solvd.homework4.hierarchy;
 
 import com.solvd.homework4.interfaces.*;
 
+import java.lang.invoke.MethodHandles;
 import java.util.Objects;
+import java.util.logging.Logger;
 
 public abstract class Computer implements IShutdown, IRun, ICapsLock, ICapsUnlock, ITemperature, IBoot {
+    private final static Logger LOGGER = Logger.getLogger(MethodHandles.lookup().lookupClass().getName());
 
     private String processor;
     private int memory;
@@ -44,7 +47,7 @@ public abstract class Computer implements IShutdown, IRun, ICapsLock, ICapsUnloc
     }
 
     public void temperature(){
-        System.out.println("No computer specified to check");
+        LOGGER.info("No computer specified to check");
     }
 
     @Override
