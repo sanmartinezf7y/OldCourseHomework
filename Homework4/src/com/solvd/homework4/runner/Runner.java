@@ -1,5 +1,6 @@
 package com.solvd.homework4.runner;
 
+import com.solvd.homework4.exceptions.InvalidItemException;
 import com.solvd.homework4.exceptions.UnderageException;
 import com.solvd.homework4.hierarchy.Desktop;
 import com.solvd.homework4.hierarchy.Laptop;
@@ -75,6 +76,11 @@ public class Runner {
     }
     LOGGER.info("Access granted - you are old enough");
 
-
+  try{
+    int[] availablePCsIDs = {1,2,3,4};
+    System.out.println(availablePCsIDs[5]);
+  }catch (InvalidItemException e){
+  LOGGER.info(e.getMessage() + "Please select an item from the catalog.");
+  }
   }
 }
