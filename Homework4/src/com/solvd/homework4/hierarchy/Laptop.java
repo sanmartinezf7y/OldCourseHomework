@@ -13,6 +13,7 @@ public class Laptop extends Computer implements ICharge {
     private boolean webcam;
     private int screenSize;
     private int battery;
+    public static int ltcount;
 
     public Laptop() {
     }
@@ -23,6 +24,7 @@ public class Laptop extends Computer implements ICharge {
         this.webcam = webcam;
         this.screenSize = screenSize;
         this.battery = battery;
+        ltcount++;
     }
 
     public String getKeyboardLayout() {
@@ -90,6 +92,7 @@ public class Laptop extends Computer implements ICharge {
     public void temperature(){
         LOGGER.info("The CPU temperature is 75°C");
     }
+
 
 
 

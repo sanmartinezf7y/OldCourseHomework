@@ -71,4 +71,5 @@ public abstract class Computer implements IShutdown, IRun, ICapsLock, ICapsUnloc
     public int hashCode() {
         return Objects.hash(processor, memory, diskCapacity);
     }
+
 }

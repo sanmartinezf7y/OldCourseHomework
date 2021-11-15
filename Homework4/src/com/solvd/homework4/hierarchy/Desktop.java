@@ -11,6 +11,7 @@ public class Desktop extends Computer {
     private String caseColor;
     private boolean wifiAntenna;
     private String graphicCard;
+    public static int dtcount;
 
     public Desktop() {
     }
@@ -21,6 +22,7 @@ public class Desktop extends Computer {
         this.caseColor = caseColor;
         this.wifiAntenna = wifiAntenna;
         this.graphicCard = graphicCard;
+        dtcount++;
     }
 
     public int getFans() {

@@ -12,7 +12,8 @@ import java.util.logging.Logger;
 public class Runner {
     private final static Logger LOGGER = Logger.getLogger(MethodHandles.lookup().lookupClass().getName());
 
-    public static void main(String[] args) {
+
+  public static void main(String[] args) {
 
         Desktop myPC = new Desktop("i3 9100f", 16, 1024, 3, "Black", false, "GTX 1660s");
         Desktop myPC2 = new Desktop("i5 9400f", 8, 512, 2, "White", false, "GT 1030");
@@ -44,11 +45,7 @@ public class Runner {
           LOGGER.info("These computers do not share the same components");
         }
 
-      LOGGER.info("");
-
         SalesData.pricelist(SalesData.MY_PC_PRICE, SalesData.MY_PC2_PRICE, SalesData.MY_LT_PRICE, SalesData.MY_LT2_PRICE);
-
-      LOGGER.info("");
 
         myPC.boot();
         myPC.run("Adobe Photoshop CC");
@@ -57,8 +54,6 @@ public class Runner {
         myPC.temperature();
         myPC.shutdown();
 
-      LOGGER.info("");
-
         myLT2.boot();
         myLT2.run("League of Legends");
         myLT2.charge();
@@ -66,5 +61,6 @@ public class Runner {
         myLT2.temperature();
         myLT2.shutdown();
 
+      SalesData.stock();
     }
 }
